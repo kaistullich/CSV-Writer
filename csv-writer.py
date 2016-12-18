@@ -39,9 +39,9 @@ export = [
     ['Bose',            'True Sound',      299,       True,       5.0,      'Headphones',   2015,           True,        "https://www.google.com",                                                                                                                              "https://goo.gle/oetff"]
 ]
 
-# Replace 'test.csv' with the proper name the .csv file should have
+# Replace 'test.csv' with the proper name the .csv file should be named
 with open("test.csv","w") as f:
     writer = csv.writer(f)
-    # Replace 'export' with whatever the list variable will be (if changed)
+    # Replace 'export' with whatever the variable assigned to the list is (if changed)
     writer.writerows(export)
-    print ('** PROCESS COMPLETE! **')
+    print ('** .CSV file SUCCESSFULLY created! **')
