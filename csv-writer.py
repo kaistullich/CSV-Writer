@@ -1,14 +1,8 @@
-
-# EXCEL CSV WRITER
-
-""""
-THE PROGRAM WILL OVERRIDE ANY CHANGES THAT WERE MADE BEFORE THE 1ST WRITE
-INTO THE SAME FILE. IT WILL NOT CREATE A NEW FILE IF THE NAME OF THE FILE
-IS THE SAME.
-"""
+# Excel .CSV writer
 
 import csv
 
+# Sample list of lists to be converted
 export = [
     # Brand                 Name         Price      Shipping    Rating       Category       Year         availability           image                                                                                                                                              Links to Product      
     ['Apple',           'Macbook Pro',    1300,       True,       4.5,      'Laptops',      2016,           True,        "http://zdnet1.cbsistatic.com/hub/i/2016/11/07/f2fafebf-2442-4cf1-9d48-d71fcc48a4ae/6b69e3ef899dd4feef43c63b2f9e195b/macbook-pro-13-header2.jpg",      "https://goo.gl/fI5207"],
@@ -39,7 +33,15 @@ export = [
     ['Bose',            'True Sound',      299,       True,       5.0,      'Headphones',   2015,           True,        "https://www.google.com",                                                                                                                              "https://goo.gle/oetff"]
 ]
 
-# Replace 'test.csv' with the proper name the .csv file should be named
+  
+""""                          * IMPORTANT *
+
+The program will OVERRIDE any changes that were made after the 1st write, IF
+the file name is the same. If the file name changes, it will just create a new 
+file with the new list.
+"""
+
+# Replace 'test.csv' with the name the .csv file should be called (if needed)
 with open("test.csv","w") as f:
     writer = csv.writer(f)
     # Replace 'export' with whatever the variable assigned to the list is (if changed)
