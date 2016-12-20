@@ -42,8 +42,12 @@ file with the new list.
 """
 
 # Replace 'test.csv' with the name the .csv file should be called (if needed)
-with open("test.csv","w") as f:
-    writer = csv.writer(f)
-    # Replace 'export' with whatever the variable assigned to the list is (if changed)
-    writer.writerows(export)
-    print ('** .CSV file SUCCESSFULLY created! **')
+try:
+    with open("test.csv","w") as f:
+        writer = csv.writer(f)
+        # Replace 'export' with whatever the variable assigned to the list is (if changed)
+        writer.writerows(export)
+        print ('** .CSV file SUCCESSFULLY created! **')
+        
+except Exception as e:
+    print ('The following error occured: ',str(e))
