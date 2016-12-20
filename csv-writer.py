@@ -41,13 +41,13 @@ the file name is the same. If the file name changes, it will just create a new
 file with the new list.
 """
 
-# Replace 'test.csv' with the name the .csv file should be called (if needed)
+# Replace 'sample.csv' with the name the .csv file should be called (if needed)
 try:
-    with open("test.csv","w") as f:
+    with open("sample.csv","w") as f:
         writer = csv.writer(f)
         # Replace 'export' with whatever the variable assigned to the list is (if changed)
         writer.writerows(export)
         print ('** .CSV file SUCCESSFULLY created! **')
-        
+
 except Exception as e:
     print ('The following error occured: ',str(e))
